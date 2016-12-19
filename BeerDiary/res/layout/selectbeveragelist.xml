@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_margin="3dp" 
+		android:orientation="vertical" >
+	<LinearLayout android:id="@+id/top_control_bar" 
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content" 
+		android:orientation="vertical">
+		<TextView 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center_horizontal"
+			android:text="@string/beverage_list"
+			android:textSize="25dip"
+			android:id="@+id/top_control_text" />
+		<EditText android:id="@+id/filterText" 
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content" 
+			android:hint="@string/filter_label_beverage"
+			android:inputType="text"
+			android:maxLines="1" />
+	</LinearLayout>
+	<LinearLayout 
+		android:id="@+id/bottom_control_bar"
+		android:layout_width="fill_parent" 
+		android:layout_height="wrap_content"
+		android:layout_alignParentBottom="true"
+		android:layout_margin="3dp" >
+		<Button 
+			android:id="@+id/select_add_new_beverage"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:text="@string/add_beverage" />	
+	</LinearLayout>
+	<ListView 
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:id="@android:id/list"
+		android:layout_width="fill_parent"
+		android:layout_height="0dip"
+		android:layout_weight="1"
+		android:layout_above="@id/bottom_control_bar"
+		android:layout_below="@id/top_control_bar"
+		android:scrollbars="vertical">
+	</ListView>
+</RelativeLayout>
