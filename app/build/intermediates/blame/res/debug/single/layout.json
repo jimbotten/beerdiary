@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listbeverage.xml",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\layout\\listbeverage.xml"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\layout\\selectbeveragelist.xml",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\layout\\selectbeveragelist.xml"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\layout\\screenbeverage.xml",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\layout\\screenbeverage.xml"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\layout\\listdrink.xml",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\layout\\listdrink.xml"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\layout\\screendrinklist.xml",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\layout\\screendrinklist.xml"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\layout\\searchbeverages.xml",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\layout\\searchbeverages.xml"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\layout\\preferences.xml",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\layout\\preferences.xml"
+    }
+]

@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\beerplusone.png",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\drawable-mdpi\\beerplusone.png"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\save.png",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\drawable-mdpi\\save.png"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\delete.png",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\drawable-mdpi\\delete.png"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\add.png",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\drawable-mdpi\\add.png"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\edit.png",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\drawable-mdpi\\edit.png"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\beerlogo.png",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\drawable-mdpi\\beerlogo.png"
+    }
+]
