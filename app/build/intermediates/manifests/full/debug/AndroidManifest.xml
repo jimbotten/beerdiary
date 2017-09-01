@@ -5,8 +5,8 @@
     android:versionName="@string/Version" >
 
     <uses-sdk
-        android:minSdkVersion="7"
-        android:targetSdkVersion="7" />
+        android:minSdkVersion="16"
+        android:targetSdkVersion="26" />
 
     <uses-feature
         android:name="android.hardware.camera"

@@ -1,6 +1,6 @@
 #Internal package file, do not edit.
-#Thu Aug 31 22:38:54 EDT 2017
-25.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\screenbeverage.xml
+#Thu Aug 31 23:24:34 EDT 2017
+25.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-mdpi-v4\\beerplusone.png
 25.base=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_
 22.set=ANDROID_RESOURCE
 8.set=ANDROID_RESOURCE
@@ -39,7 +39,7 @@ count=28
 16.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\ic_tab_beverages.xml
 6.set=ANDROID_RESOURCE
 16.base=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_
-8.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
+8.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-mdpi-v4\\beerlogo.png
 8.base=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_
 17.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\ic_tab_brew_u.png
 25.set=ANDROID_RESOURCE
@@ -53,7 +53,7 @@ count=28
 22.base=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_
 0.set=ANDROID_RESOURCE
 19.set=ANDROID_RESOURCE
-9.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-mdpi-v4\\beerlogo.png
+9.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\AndroidManifest.xml
 5.set=ANDROID_RESOURCE
 18.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\ic_tab_tags_u.png
 9.base=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_
@@ -75,7 +75,7 @@ count=28
 4.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable\\ic_tab_brew_s.png
 4.base=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_
 23.set=ANDROID_RESOURCE
-24.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\drawable-mdpi-v4\\beerplusone.png
+24.file=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_\\res\\layout\\screenbeverage.xml
 9.set=ANDROID_RESOURCE
 24.base=H\:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\resources-debug.ap_
 12.set=ANDROID_RESOURCE
