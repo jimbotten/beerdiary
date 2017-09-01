@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+	android:padding="4dip"
+    android:layout_margin="2dip"
+    android:textSize="22dip" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dip"
+        android:layout_weight="1"
+        android:layout_height="42dip" >
+        <TextView
+            android:id="@+id/toptext"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+        />
+        <TextView
+            android:id="@+id/bottomtext"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1" 
+            android:singleLine="true"
+            android:ellipsize="marquee"
+            android:layout_alignWithParentIfMissing="true"
+        />
+    </LinearLayout>
+   <ImageButton
+  		android:src="@drawable/beerplusone"
+  		android:layout_width="36dip"
+  		android:layout_height="36dip" 
+  		android:scaleType="fitCenter"
+		android:onClick="AddDrinkClick" 
+		android:background="@android:color/transparent"
+     	android:layout_margin="0dip" />
+    <ImageButton
+  		android:src="@drawable/edit"
+  		android:layout_width="36dip"
+  		android:layout_height="36dip"
+  		android:scaleType="fitCenter"
+     	android:layout_margin="0dip"
+		android:background="@android:color/transparent"
+     	android:onClick="EditDrinkClick" />
+</LinearLayout>
