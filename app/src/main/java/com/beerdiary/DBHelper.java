@@ -12,18 +12,25 @@ import java.util.List;
 import android.content.ContentProvider;
 import android.content.ContentValues;
 import android.content.Context;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.net.Uri;
+import android.support.v7.widget.CardView;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Filter;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+
+import static android.support.v4.app.ActivityCompat.startActivityForResult;
 
 public class DBHelper {
 	private static final String DATABASE_NAME = "beerdiary";
@@ -118,7 +125,7 @@ public class DBHelper {
 	}
 
 	
-	static class BeverageRow extends Object {
+	public static class BeverageRow extends Object {
 		// TODO Change BEverage row to the Beverage Class
         private Long _id;
         private String Name;
@@ -259,13 +266,13 @@ public class DBHelper {
 		    	}
 			BeverageRow b = getItem(position);
 			if (b != null) {
-				TextView tt = (TextView) v.findViewById(R.id.toptext);
-				TextView bt = (TextView) v.findViewById(R.id.bottomtext);
+				TextView tt = v.findViewById(R.id.toptext);
+				TextView bt = v.findViewById(R.id.bottomtext);
 				if (tt != null) {
-				tt.setText(((com.beerdiary.DBHelper.BeverageRow) b).getName());                            }
+				tt.setText(b.getName());                            }
 					//tt.setText("Name: "+b.getName());                            }
 			    			if (bt != null) {
-			    				bt.setText(((com.beerdiary.DBHelper.BeverageRow) b).getMaker());                            }
+			    				bt.setText(b.getMaker());                            }
 								}	
 			    		return v;
 			    	}
@@ -428,8 +435,7 @@ public class DBHelper {
 
 	}
 
-
-	static class DrinkRow extends Object {
+	public static class DrinkRow extends Object {
 		private Long _id;
 		private BeverageRow Beverage;
 		private Date Ddate;
@@ -465,6 +471,9 @@ public class DBHelper {
 		public Date getDate() {
 			return Ddate;
 		}
+		public String getName() {
+			return Beverage.getName();
+		}
 		public String getFormattedDate() {
 			SimpleDateFormat formatter = new SimpleDateFormat("h:mm a dd MMM");
 			//hh:mm a dd MMM // Example: 10:17 AM 12 Feb
@@ -485,9 +494,11 @@ public class DBHelper {
 			_id = new_id;
 		}
 	}
-		
+
+
+
 	class ViewHolder {
-		TextView toptext; 
+		TextView toptext;
 		TextView bottomtext;
 		Long hidingID;
 	}
@@ -501,7 +512,7 @@ public class DBHelper {
 
 		private final Comparator<DrinkRow> dSorter = new Comparator<DrinkRow>() {
 			public int compare(DrinkRow dr1, DrinkRow dr2) {
-				return ((com.beerdiary.DBHelper.DrinkRow) dr2).getDate().compareTo(((com.beerdiary.DBHelper.DrinkRow) dr1).getDate());
+				return dr2.getDate().compareTo(dr1.getDate());
 			}
 	    };
 	   
@@ -522,14 +533,14 @@ public class DBHelper {
 			       if (v == null) {
 			          v = mInflater.inflate(R.layout.listdrink, null);
 			          ViewHolder viewHolder = new ViewHolder();
-			          viewHolder.toptext = (TextView) v.findViewById(R.id.toptext);
-			          viewHolder.bottomtext = (TextView) v.findViewById(R.id.bottomtext);
+			          viewHolder.toptext = v.findViewById(R.id.toptext);
+			          viewHolder.bottomtext = v.findViewById(R.id.bottomtext);
 			          v.setTag(viewHolder);
 			       }
 				DrinkRow d = getItem(position);
 					 if (d != null) {
 			          ViewHolder viewHolder = (ViewHolder) v.getTag();
-			          viewHolder.toptext.setText(((com.beerdiary.DBHelper.DrinkRow) d).getBeverage().getName());
+			          viewHolder.toptext.setText(d.getBeverage().getName());
 			          viewHolder.bottomtext.setText(d.getFormattedDate());
 			          viewHolder.hidingID = d.get_id();
 			       }
@@ -644,7 +655,6 @@ public class DBHelper {
 
 	}
 
-	
 	private class OpenHelper extends SQLiteOpenHelper {
     	public OpenHelper(Context context) {
     		super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -976,7 +986,7 @@ public class DBHelper {
         for (int i = 0; i < num; i++) {
             if (i != 0)
                 buf.append(delim);
-            buf.append((String) list.get(i));
+            buf.append(list.get(i));
         }
         return buf.toString();
     }    
@@ -1016,4 +1026,4 @@ public class DBHelper {
 			return false;
 		}
     }
-};
+}

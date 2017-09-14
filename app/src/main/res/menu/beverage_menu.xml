@@ -4,11 +4,6 @@
 	xmlns:app="http://schemas.android.com/apk/res-auto"
 	android:name="Main menu" >
 	<item
-		android:id="@+id/menuAddDrink"
-		android:icon="@drawable/beerplusone"
-		android:title="@string/add_drink_to_list"
-		app:showAsAction="ifRoom"></item>
-	<item 
 		android:id="@+id/menuOptions"
 		android:title="@string/options">
 	</item>

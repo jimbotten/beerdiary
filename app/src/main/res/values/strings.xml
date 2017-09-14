@@ -20,10 +20,11 @@
     <string name="beverage_maker">Brewer</string>
     <string name="beverage_maker_location">Brewer Location</string>
     <string name="beverage_description">Description</string>
-    <string name="menu_export_to_csv">Export CSV to SD</string>
+    <string name="menu_export_to_csv">Export SD</string>
     <string name="menu_import_to_csv">Import CSV</string>
     <string name="import_error_no_file">Import Error.  File not found.  Looking for /sdcard/BeerDiary/BeerDiary.csv</string>
-    <string name="menu_view_beverage_list">Search Beer List</string>
+    <string name="options">Options</string>
+    <string name="menu_view_beverage_list">Search Beer</string>
     <string name="menu_set_theme">Set Theme</string>
     <string name="beverage_tags">Tags</string>
     <string name="beverage_Maker">Brewers</string>
@@ -36,7 +37,7 @@
     <string name="delete_beverage">Deleting Beer\n</string>
     <string name="update_beverage">Updating Beer\n</string>
     <string name="adding_beverage">Adding Beer\n</string>
-    <string name="add_drink_to_list">Add</string>
+    <string name="add_drink_to_list">Add Beer</string>
     <string name="add_another">Drink it</string>
     <string name="remove_drink_to_list">Del</string>
     <string name="search_hint">Search</string>
@@ -45,4 +46,10 @@
     <string name="preference_submit">Save theme setting</string>
     <string name="Version">1.0.9</string>
     <string name="export">Backup to SD</string>
+    <string name="cdAddBeer">Add this beer to the Drink List</string>
+    <string name="cdDeleteBeer">Delete this beer entry</string>
+    <string name="cdCamera">Take a picture of this beer</string>
+    <string name="cdAccept">Accept these changes</string>
+    <string name="cdPicture"></string>
+    <string name="hintTags">hoppy golden refreshing</string>
 </resources>

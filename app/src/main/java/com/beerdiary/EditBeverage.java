@@ -17,6 +17,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.ContextThemeWrapper;
 import android.view.View;
@@ -33,7 +34,7 @@ import com.beerdiary.DBHelper.BeverageAdapter;
 import com.beerdiary.DBHelper.BeverageRow;
 import com.beerdiary.DBHelper.DrinkRow;
 
-public class EditBeverage extends Activity {
+public class EditBeverage extends AppCompatActivity {
 
 	public static final int PICK_BEVERAGE=1;
 	private static final int DIALOG_DRINK_DELETE=0;
@@ -85,19 +86,19 @@ public class EditBeverage extends Activity {
 		
         db = DBHelper.getInstance(this);
         
-        tvBeverageName = (EditText) findViewById(R.id.beverage_name);
-		tvBeverageMaker = (AutoCompleteTextView) findViewById(R.id.beverage_maker);
-		tvBeverageLocation = (EditText) findViewById(R.id.beverage_maker_location);
-		tvBeverageDescription = (EditText) findViewById(R.id.beverage_description);
-		tvBeverageTags = (EditText) findViewById(R.id.beverage_tags);
-		btnEditBeverage = (ImageButton) findViewById(R.id.button_modify_beverage);
-		btnPictureBeverage = (ImageButton) findViewById(R.id.button_camera);
+        tvBeverageName = findViewById(R.id.beverage_name);
+		tvBeverageMaker = findViewById(R.id.beverage_maker);
+		tvBeverageLocation = findViewById(R.id.beverage_maker_location);
+		tvBeverageDescription = findViewById(R.id.beverage_description);
+		tvBeverageTags = findViewById(R.id.beverage_tags);
+		btnEditBeverage = findViewById(R.id.button_modify_beverage);
+		btnPictureBeverage = findViewById(R.id.button_camera);
 //		final Button btnCancelAddBeverage = (Button) findViewById(R.id.button_cancel_beverage);
-		btnDrinkBeverage = (ImageButton) findViewById(R.id.button_drink_beverage);
-		btnDeleteBeverage = (ImageButton) findViewById(R.id.button_delete_beverage);
-		tvBeverageID = (TextView) findViewById(R.id.beverage_id);
-		tvBeverageimageUri = (TextView) findViewById(R.id.beverage_imageUri);
-		imgBeverageImg = (ImageView) findViewById(R.id.beverage_image);
+		btnDrinkBeverage = findViewById(R.id.button_drink_beverage);
+		btnDeleteBeverage = findViewById(R.id.button_delete_beverage);
+		tvBeverageID = findViewById(R.id.beverage_id);
+		tvBeverageimageUri = findViewById(R.id.beverage_imageUri);
+		imgBeverageImg = findViewById(R.id.beverage_image);
 		if ( ! checkCameraHardware(this) ) {
 			imgBeverageImg.setVisibility(View.GONE);
 		}
@@ -322,13 +323,9 @@ public class EditBeverage extends Activity {
 	}
 	/** Check if this device has a camera */
 	private boolean checkCameraHardware(Context context) {
-	    if (context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA)){
-	        // this device has a camera
-	        return true;
-	    } else {
-	        // no camera on this device
-	        return false;
-	    }
+        // this device has a camera
+// no camera on this device
+        return context.getPackageManager().hasSystemFeature(PackageManager.FEATURE_CAMERA);
 	}	
 	public void editOrAddBeverage() {
 				if (editMode) { // EDITING

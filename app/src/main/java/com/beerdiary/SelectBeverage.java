@@ -8,8 +8,11 @@ import android.app.SearchManager;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -22,7 +25,8 @@ import com.beerdiary.DBHelper.BeverageAdapter;
 import com.beerdiary.DBHelper.BeverageRow;
 import com.beerdiary.DBHelper.DrinkRow;
 
-public class SelectBeverage extends ListActivity {
+ public class SelectBeverage extends ListActivity {
+// public class SelectBeverage extends AppCompatActivity {
 	public static final int EDIT_BEVERAGE=10;
     DBHelper db = null;
     ArrayList<BeverageRow> allBeverages = null;
@@ -54,11 +58,11 @@ public class SelectBeverage extends ListActivity {
         super.onCreate(savedInstanceState);
 		setContentView(R.layout.selectbeveragelist);
 		
-		btnAddBeverage = (Button) findViewById(R.id.select_add_new_beverage);
-    	viewBeverageList = (ListView)getListView();
-    	filterText = (EditText) findViewById(R.id.filterText);
-    	topControlBar = (TextView) findViewById(R.id.top_control_text);
-        bottomControlBar = (Button) findViewById(R.id.select_add_new_beverage);
+		btnAddBeverage = findViewById(R.id.select_add_new_beverage);
+    	viewBeverageList = getListView();
+    	filterText = findViewById(R.id.filterText);
+    	topControlBar = findViewById(R.id.top_control_text);
+        bottomControlBar = findViewById(R.id.select_add_new_beverage);
 		Bundle ex = getIntent().getExtras();
 		
 		switch (ex.getInt(FILTER_TYPE)) {
@@ -86,7 +90,7 @@ public class SelectBeverage extends ListActivity {
 		
 		db = DBHelper.getInstance(this);
         allBeverages = db.getAllBeverages();
-        bevAdapter=db.new BeverageAdapter(this, R.layout.listbeverage, (ArrayList<BeverageRow>) allBeverages); 
+        bevAdapter=db.new BeverageAdapter(this, R.layout.listbeverage, allBeverages);
         bevAdapter.setFilterType(filterType);
         
         viewBeverageList.setTextFilterEnabled(true);
@@ -117,7 +121,7 @@ public class SelectBeverage extends ListActivity {
 		// Add Bev to Drink List
     		@Override
 			public void onItemClick(AdapterView<?> parent, View view, final int position, long id) {
-				BeverageRow br = (BeverageRow) bevAdapter.getItem(position);
+				BeverageRow br = bevAdapter.getItem(position);
 				DrinkRow dr = new DrinkRow(br);
 				
 				db.setDrink(dr);
@@ -128,7 +132,9 @@ public class SelectBeverage extends ListActivity {
 
     	performSearch(getIntent());
 	}
-	
+
+
+
 	@Override
 	protected void onNewIntent(Intent intent) {
 	    setIntent(intent);
@@ -156,7 +162,7 @@ public class SelectBeverage extends ListActivity {
 		case (EDIT_BEVERAGE) : {
 			if (resCode == Activity.RESULT_OK) {
 				allBeverages = db.getAllBeverages();
-		        bevAdapter=db.new BeverageAdapter(this, R.layout.listbeverage, (ArrayList<BeverageRow>) allBeverages); 
+		        bevAdapter=db.new BeverageAdapter(this, R.layout.listbeverage, allBeverages);
 				setListAdapter(bevAdapter);
 				// if it was result ok, and this was returned from adding and they chose to drink			
 				if (data.hasExtra("Drank")) {
@@ -173,7 +179,7 @@ public class SelectBeverage extends ListActivity {
 			super.onResume();
 			db = DBHelper.getInstance(this);
 	        allBeverages = db.getAllBeverages();
-	        bevAdapter=db.new BeverageAdapter(this, R.layout.listbeverage, (ArrayList<BeverageRow>) allBeverages); 
+	        bevAdapter=db.new BeverageAdapter(this, R.layout.listbeverage, allBeverages);
 	        bevAdapter.setFilterType(filterType);
 	        
 	        viewBeverageList.setTextFilterEnabled(true);
@@ -184,7 +190,7 @@ public class SelectBeverage extends ListActivity {
 	public void  EditDrinkClick(View view) {
 		int position = getListView().getPositionForView(view);
 	    
-		BeverageRow br = (BeverageRow) bevAdapter.getItem(position);
+		BeverageRow br = bevAdapter.getItem(position);
 		Intent intent = new Intent(SelectBeverage.this, EditBeverage.class);
 		intent.putExtra("EDITING_MODE", true); // EDITING
 		intent.putExtra("BID", br.get_id());
@@ -194,7 +200,7 @@ public class SelectBeverage extends ListActivity {
 	public void AddDrinkClick(View view) {
 		int position = getListView().getPositionForView(view);
 
-		BeverageRow br = (BeverageRow) bevAdapter.getItem(position);
+		BeverageRow br = bevAdapter.getItem(position);
 		DrinkRow dr = new DrinkRow(br);
 		
 		db.setDrink(dr);

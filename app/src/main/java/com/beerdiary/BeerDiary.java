@@ -66,14 +66,14 @@ public class BeerDiary extends ListActivity {
         
         db = DBHelper.getInstance(this);
         allDrinks = db.getAllDrinks();
-        TopDrinkAdapter=db.new DrinkAdapter(this, R.layout.listdrink, (ArrayList<DrinkRow>) allDrinks);
+        TopDrinkAdapter=db.new DrinkAdapter(this, R.layout.listdrink, allDrinks);
         
-        drink_top_control_bar =(LinearLayout) this.findViewById(R.id.top_control_bar);
-    	drink_bottom_control_bar =(LinearLayout) this.findViewById(R.id.bottom_control_bar);
+        drink_top_control_bar = this.findViewById(R.id.top_control_bar);
+    	drink_bottom_control_bar = this.findViewById(R.id.bottom_control_bar);
     	
-    	btnAddDrink = (Button)this.findViewById(R.id.btnAddDrink);
+    	btnAddDrink = this.findViewById(R.id.btnAddDrink);
         
-    	viewDrinkList = (ListView)getListView();
+    	viewDrinkList = getListView();
         setListAdapter(TopDrinkAdapter);
         viewDrinkList.setOnItemClickListener(new OnItemClickListener() {
 				@Override
@@ -106,7 +106,7 @@ public class BeerDiary extends ListActivity {
 		switch(reqCode) {
 		case (PICK_BEVERAGE) : {
 				allDrinks = db.getAllDrinks();
-		      TopDrinkAdapter=db.new DrinkAdapter(this, R.layout.listdrink, (ArrayList<DrinkRow>) allDrinks);
+		      TopDrinkAdapter=db.new DrinkAdapter(this, R.layout.listdrink, allDrinks);
 		      setListAdapter(TopDrinkAdapter);
 		      break;
 			}
@@ -126,31 +126,31 @@ public class BeerDiary extends ListActivity {
 		Intent intent = null;
 		
 		 switch (item.getItemId()) {
-		 case (R.id.menuCsvExport) : 
-			 try {
-				 db.toCSV();
-			 } catch (IOException e) {
-				 e.printStackTrace();
-			 }
-			 break;
-		 
-		 case (R.id.menuCsvImport) : 
-			 try {
-				 db.fromCSV();
-			 } catch (IOException e) {
-				 e.printStackTrace();
-			 }
-			 break;
+//		 case (R.id.menuCsvExport) :
+//			 try {
+//				 db.toCSV();
+//			 } catch (IOException e) {
+//				 e.printStackTrace();
+//			 }
+//			 break;
+//
+//		 case (R.id.menuCsvImport) :
+//			 try {
+//				 db.fromCSV();
+//			 } catch (IOException e) {
+//				 e.printStackTrace();
+//			 }
+//			 break;
 			 
 		  case (R.id.menuAddDrink) : 
 			  intent = new Intent(BeerDiary.this, SearchAll.class);
 			  startActivity(intent);
 			  break;
 		  
-		  case (R.id.menuTheme) :
-			  	intent = new Intent(BeerDiary.this, SetPreferences.class);
-		  		startActivity(intent);
-		  		break;
+//		  case (R.id.menuTheme) :
+//			  	intent = new Intent(BeerDiary.this, SetPreferences.class);
+//		  		startActivity(intent);
+//		  		break;
 		 }
 		return false;
 		
@@ -198,14 +198,14 @@ public class BeerDiary extends ListActivity {
 	public void onResume() {
 			super.onResume();
 			allDrinks = db.getAllDrinks();
-			TopDrinkAdapter=db.new DrinkAdapter(this, R.layout.listdrink, (ArrayList<DrinkRow>) allDrinks);
+			TopDrinkAdapter=db.new DrinkAdapter(this, R.layout.listdrink, allDrinks);
 			setListAdapter(TopDrinkAdapter);
 	}
 	
 	public void  EditDrinkClick(View view) {
 		int row = getListView().getPositionForView(view);
     
-        BeverageRow br = (BeverageRow) TopDrinkAdapter.getItem(row).getBeverage();
+        BeverageRow br = TopDrinkAdapter.getItem(row).getBeverage();
 	
         Intent intent = new Intent(BeerDiary.this, EditBeverage.class);
 		intent.putExtra("EDITING_MODE", true); // EDITING
@@ -216,7 +216,7 @@ public class BeerDiary extends ListActivity {
 	public void  AddDrinkClick(View view) {
 		int row = getListView().getPositionForView(view);
 	    
-        BeverageRow br = (BeverageRow) TopDrinkAdapter.getItem(row).getBeverage();
+        BeverageRow br = TopDrinkAdapter.getItem(row).getBeverage();
 	
         DrinkRow dr = new DrinkRow(br);
         
@@ -224,7 +224,7 @@ public class BeerDiary extends ListActivity {
         db.setDrink(dr);
         //Add to the database, then requery to get the right drinkId in the adapter 
 		allDrinks = db.getAllDrinks();
-		TopDrinkAdapter=db.new DrinkAdapter(this, R.layout.listdrink, (ArrayList<DrinkRow>) allDrinks);
+		TopDrinkAdapter=db.new DrinkAdapter(this, R.layout.listdrink, allDrinks);
 		setListAdapter(TopDrinkAdapter);
 		}
 	

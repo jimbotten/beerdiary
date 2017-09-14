@@ -10,35 +10,42 @@
             android:padding="0dip"
             android:layout_margin="0dip"
             android:layout_alignParentBottom="true" >
+
 			<ImageButton
-			    android:id="@+id/button_drink_beverage"
-  				android:src="@drawable/beerplusone"
-  				android:layout_width="wrap_content"
-            	android:layout_height="wrap_content"
-            	android:layout_alignParentLeft="true" 
-  				android:background="@android:color/transparent"/>
-  			<ImageButton
-			    android:id="@+id/button_camera"
-  				android:src="@android:drawable/ic_menu_camera"
-  				android:layout_width="wrap_content"
-            	android:layout_height="wrap_content"
-            	android:layout_toRightOf="@id/button_drink_beverage" 
-  				android:background="@android:color/transparent"/>
-  			
+				android:id="@+id/button_drink_beverage"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentLeft="true"
+				android:background="@android:color/transparent"
+				android:contentDescription="@string/cdAddBeer"
+				android:src="@drawable/beerplusone" />
+
 			<ImageButton
-			    android:id="@+id/button_modify_beverage"
-  				android:src="@drawable/save"
-  				android:layout_width="wrap_content"
-            	android:layout_height="wrap_content"
-            	android:layout_alignParentRight="true"
-  				android:background="@android:color/transparent" />
-  			<ImageButton
-			  	android:id="@+id/button_delete_beverage"
-  				android:src="@drawable/delete"
-  				android:layout_width="wrap_content"
-            	android:layout_height="wrap_content"
-            	android:layout_toLeftOf="@id/button_modify_beverage"
-  				android:background="@android:color/transparent"/>
+				android:id="@+id/button_camera"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toRightOf="@id/button_drink_beverage"
+				android:background="@android:color/transparent"
+				android:contentDescription="@string/cdCamera"
+				android:src="@android:drawable/ic_menu_camera" />
+
+			<ImageButton
+				android:id="@+id/button_modify_beverage"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_alignParentRight="true"
+				android:background="@android:color/transparent"
+				android:contentDescription="@string/cdAccept"
+				android:src="@drawable/save" />
+
+			<ImageButton
+				android:id="@+id/button_delete_beverage"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_toLeftOf="@id/button_modify_beverage"
+				android:background="@android:color/transparent"
+				android:contentDescription="@string/cdDeleteBeer"
+				android:src="@drawable/delete" />
 		</RelativeLayout>
 		<ScrollView
 			android:layout_width="fill_parent"
@@ -96,16 +103,19 @@
     		  		android:layout_width="wrap_content"
               		android:layout_height="wrap_content"
 			  		android:padding="3dip" />
-    		<EditText 
-    				android:id="@+id/beverage_tags"
-              		android:layout_width="fill_parent"
-              		android:layout_height="wrap_content" />
-    		<ImageView
-    				android:id="@+id/beverage_image"
-    				android:src="@drawable/beerlogo"
-    				android:layout_width="fill_parent"
-              		android:layout_height="wrap_content"
-              		/>
+
+				<EditText
+					android:id="@+id/beverage_tags"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:hint="@string/hintTags" />
+
+				<ImageView
+					android:id="@+id/beverage_image"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:contentDescription="@string/cdPicture"
+					android:src="@drawable/beerlogo" />
     		<TextView 
     				android:id="@+id/beverage_imageUri"
     				android:visibility="gone" 
