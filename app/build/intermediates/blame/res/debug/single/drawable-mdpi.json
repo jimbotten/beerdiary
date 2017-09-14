@@ -12,6 +12,10 @@
         "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\drawable-mdpi\\delete.png"
     },
     {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\ic_add_black_24dp.png",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_add_black_24dp.png"
+    },
+    {
         "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi\\add.png",
         "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\drawable-mdpi\\add.png"
     },

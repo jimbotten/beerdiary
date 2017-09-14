@@ -1,21 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu
   xmlns:android="http://schemas.android.com/apk/res/android"
-  android:name="Main menu" >
-	<item 
-		android:id="@+id/menuCsvExport"
-		android:title="@string/menu_export_to_csv">
-	</item>
-	<item 
-		android:id="@+id/menuCsvImport"
-		android:title="@string/menu_import_to_csv">
-	</item>
-	<item 
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:name="Main menu" >
+	<item
 		android:id="@+id/menuAddDrink"
-		android:title="@string/menu_view_beverage_list">
-	</item>
+		android:icon="@drawable/beerplusone"
+		android:title="@string/add_drink_to_list"
+		app:showAsAction="ifRoom"></item>
 	<item 
-		android:id="@+id/menuTheme"
-		android:title="@string/menu_set_theme">
+		android:id="@+id/menuOptions"
+		android:title="@string/options">
 	</item>
 </menu>

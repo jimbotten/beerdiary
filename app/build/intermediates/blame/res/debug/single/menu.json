@@ -2,5 +2,9 @@
     {
         "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\menu\\main.xml",
         "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\menu\\main.xml"
+    },
+    {
+        "merged": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\build\\intermediates\\res\\merged\\debug\\menu\\beverage_menu.xml",
+        "source": "H:\\Android\\AndroidStudioProjects\\beerdiary\\app\\src\\main\\res\\menu\\beverage_menu.xml"
     }
 ]
