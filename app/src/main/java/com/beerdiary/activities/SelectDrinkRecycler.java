@@ -48,11 +48,12 @@ public class SelectDrinkRecycler extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        // specify an adapter (see also next example)
+        // specify an adapter
         db = DBHelper.getInstance(this);
         allDrinks = db.getAllDrinks();
         mAdapter = new DrinkRecyclerAdapter(getApplicationContext(), allDrinks);
         mRecyclerView.setAdapter(mAdapter);
+
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -68,6 +69,8 @@ public class SelectDrinkRecycler extends AppCompatActivity {
                 startActivity(intent);
                 break;
         }
+        // TODO add a case for the options menu that opens an options page (similar to SetPreferences Class and preferences.xml
+        // TODO add options page with any other preferences
         return false;
 
     }

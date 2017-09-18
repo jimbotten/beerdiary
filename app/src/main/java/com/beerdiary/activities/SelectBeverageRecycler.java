@@ -41,11 +41,15 @@ public class SelectBeverageRecycler extends AppCompatActivity {
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
 
-        // specify an adapter (see also next example)
+        // specify an adapter
         db = DBHelper.getInstance(this);
         allBeverages = db.getAllBeverages();
         mAdapter = new BeverageRecyclerAdapter(allBeverages);
         mRecyclerView.setAdapter(mAdapter);
+
+        // TODO make this view respond to intents - if its opened from an intent, display a toast message
+        // TODO if this view is responding to an intent, update the title bar somehow to show edit mode or select mode
+        // TODO make the camera feature more seamless on the edit page
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();

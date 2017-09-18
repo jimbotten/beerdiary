@@ -46,6 +46,26 @@ public class DrinkRecyclerAdapter extends RecyclerView.Adapter<DrinkRecyclerAdap
             mCardView= v.findViewById(R.id.select_drink_recycler_view_recyclerview);
             toptext= v.findViewById(R.id.drink_recycler_cardview_toptext);
             bottomtext= v.findViewById(R.id.drink_recycler_cardview_bottomtext);
+            // TODO 1 make the on Click Listener for the card display a toast message with the position of the line
+            // TODO 2 make the on Click Listener for the card display more info about that drink (a popup with beverage details?)
+
+            // TODO make the Long Click Listener start an intent for the beverage recycler with the position of the selected line in edit mode
+            // TODO create an edit view, similar to listbeverage.xml, but updated with newer android support
+            // TODO update editBeverage class to work with new edit view
+            // TODO update edit view with a picker control for hop flavor, color, aroma, mouthfeel, and taste.  You should be able to multi select from a picker control into a multivalue field for each of these
+            // TODO taste is more complex - shoudl be able to specify front mid or end of taste
+
+            // TODO update the SelectBeverage view to support searches of multiple columns (brewer, beer name, tags)  might need a separate view for complex queries?
+            // TODO create a view that has some access to canned reports on data (how many drinks avg, scoring numbers, analysis on favorite styles, etc)
+            // TODO update the drawables, some icons aren't displaying correctly, might be a new way to store/categorize them that we aren't doing
+
+            // TODO remove classes and layouts that aren't needed anymore after updates are complete
+
+            // TODO update the themes.xml and style.xml to make this app actually look decent
+            // TODO stylize the controls on views to make them look better
+            // TODO review font choices throughout the app
+            // TODO review if out of box icons will work to replace the beer icons all over the place
+
 
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
