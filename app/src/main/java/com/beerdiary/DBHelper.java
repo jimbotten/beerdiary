@@ -1,5 +1,24 @@
 package com.beerdiary;
 
+import android.content.ContentProvider;
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.SQLException;
+import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteOpenHelper;
+import android.net.Uri;
+import android.support.annotation.NonNull;
+import android.util.Log;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Filter;
+import android.widget.TextView;
+
+import com.beerdiary.activities.App;
+
 import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -9,45 +28,22 @@ import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
-import android.content.ContentProvider;
-import android.content.ContentValues;
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.database.SQLException;
-import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteOpenHelper;
-import android.net.Uri;
-import android.support.v7.widget.CardView;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.Filter;
-import android.widget.ImageButton;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-
-import static android.support.v4.app.ActivityCompat.startActivityForResult;
-
 public class DBHelper {
 	private static final String DATABASE_NAME = "beerdiary";
 	private static final Integer DATABASE_VERSION = 17;
 
-	public static final String B_ID = "_id";
-	public static final String B_NAME = "NAME";
-	public static final String B_MAKER = "MAKER";
-	public static final String B_MAKERLOCATION = "MAKERLOCATION";
-	public static final String B_DESCRIPTION = "DESCRIPTION";
-	public static final String B_TAGS = "TAGS";
-	public static final String B_TAGSDELIMETER = ";";
-	public static final String B_R_OVERALL = "R_OVERALL";
-	public static final String B_PIC = "IMAGEURI";
-	public static final String D_ID = "_id";
-	public static final String D_BID = "BID";
-	public static final String D_DATE = "DDATE";	
+	private static final String B_ID = "_id";
+	private static final String B_NAME = "NAME";
+	private static final String B_MAKER = "MAKER";
+	private static final String B_MAKERLOCATION = "MAKERLOCATION";
+	private static final String B_DESCRIPTION = "DESCRIPTION";
+	private static final String B_TAGS = "TAGS";
+	private static final String B_TAGSDELIMETER = ";";
+	private static final String B_R_OVERALL = "R_OVERALL";
+	private static final String B_PIC = "IMAGEURI";
+	private static final String D_ID = "_id";
+	private static final String D_BID = "BID";
+	private static final String D_DATE = "DDATE";
 	
 	private static final String TBL_BEVERAGE = "BEVERAGE";
 	private static final String TBL_DRINK = "DRINK";
@@ -75,23 +71,25 @@ public class DBHelper {
 	private static final String BEVERAGE_INIT6 = "INSERT INTO BEVERAGE (NAME,MAKER,MAKERLOCATION,DESCRIPTION,TAGS) VALUES (\'Aces & Ates\', \'Big Boss\', \'Raleigh, NC\', \'Coffee Stout\', \'\');";
 	private static final String BEVERAGE_INIT7 = "INSERT INTO BEVERAGE (NAME,MAKER,MAKERLOCATION,DESCRIPTION,TAGS) VALUES (\'Harvest Time\', \'Big Boss\', \'Raleigh, NC\', \'Pumpkin Ale\', \'\');";
 	private static final String BEVERAGE_INIT8 = "INSERT INTO BEVERAGE (NAME,MAKER,MAKERLOCATION,DESCRIPTION,TAGS) VALUES (\'Big Operator\', \'Big Boss\', \'Raleigh, NC\', \'Belgian Black Raspberry\', \'Fruit\');";
-	
+	//TODO update database to support multivalue hop flavor, color, aroma, mouthfeel, and taste.  maintain existing tags field
 	public static final Uri CONTENT_URI = Uri.parse("content://com.beerdiary.beverageprovider");
 	
     private static SQLiteDatabase db;
-	private static DBHelper dbHelper = null;
+	private static DBHelper dbHelper;
+
 	private OpenHelper openHelper;
 	private static final String lock = "";
-	private static Context cx;
+	//private static Context cx;
 
 	public class Beverage {
+		// TODO This class needs unit tests
 		private String Name;
 		//private Integer Id;
 		private String Maker;
 		private String Description;
 		private String[] Tags;
 		private String MakerLocation;
-		
+
 		public String getName() {
 			return Name;
 		}
@@ -124,8 +122,7 @@ public class DBHelper {
 		}
 	}
 
-	
-	public static class BeverageRow extends Object {
+	public static class BeverageRow {
 		// TODO Change BEverage row to the Beverage Class
         private Long _id;
         private String Name;
@@ -169,49 +166,53 @@ public class DBHelper {
         BeverageRow(Long new_id) {
         	_id= new_id;
         }
-        public String getName() {
+
+		public String getName() {
     		return Name;
     	}
     	public String getMaker() {
     		return Maker;
     	}
-    	public String getMakerLocation() {
+		public String[] getTagsArray() {
+			return Tags;
+		}
+		public void setName(String _name) {
+			Name = _name;
+		}
+		public void set_id(Long new_id) {
+			_id = new_id;
+		}
+
+		String getMakerLocation() {
     		return MakerLocation;
     	}
-    	public String getDescription() {
+    	String getDescription() {
     		return Description;
     	}
-    	public String getTags() {
+    	String getTags() {
     		return combine(Tags);
-    	}
-    	public String[] getTagsArray() {
-    		return Tags;
     	}
     	public Long get_id() {
     		return _id;
     	}
-    	public String getimageUri() {
+    	String getimageUri() {
     		return imageUri;
     	}
-    	public void setName(String _name) {
-    		Name = _name;
-    	}
-    	public void setMaker(String _maker) {
+    	public BeverageRow getRow() { return this; }
+
+    	void setMaker(String _maker) {
     		Maker = _maker;
     	}
-    	public void setMakerLocation(String _makerLocation) {
+    	void setMakerLocation(String _makerLocation) {
     		MakerLocation = _makerLocation;
     	}
-    	public void setDescription(String _description) {
+    	void setDescription(String _description) {
     		Description = _description;
     	}
-    	public void setTags(String _tags) {
+    	void setTags(String _tags) {
     		Tags = _tags.split(B_TAGSDELIMETER);
     	}
-    	public void set_id(Long new_id) {
-    		_id = new_id;
-    	}
-    	public void setimageUri(String _imageUri) {
+    	void setimageUri(String _imageUri) {
     		imageUri = _imageUri;
     	}
     	private static String combine(String[] s)
@@ -227,40 +228,40 @@ public class DBHelper {
     	}
 	}
 
-	public class BeverageAdapter extends ArrayAdapter<BeverageRow> {
+	class BeverageAdapter extends ArrayAdapter<BeverageRow> {
 		private List<BeverageRow> myObjects;
 		private final Object myLock = new Object();
 		private ArrayList<BeverageRow> myOriginalValues;
 		private BeverageFilter myFilter;
 		private LayoutInflater myInflater;
 
-		public static final int FILTER_TYPE_BEVERAGE=1;
-		public static final int FILTER_TYPE_MAKER=2;
-		public static final int FILTER_TYPE_TAGS=3;
-		protected int filterType = FILTER_TYPE_BEVERAGE;
+		static final int FILTER_TYPE_BEVERAGE=1;
+		static final int FILTER_TYPE_MAKER=2;
+		static final int FILTER_TYPE_TAGS=3;
+		int filterType = FILTER_TYPE_BEVERAGE;
 		
 		
 		private final Comparator<BeverageRow> mySorter = new Comparator<BeverageRow>() {
 			public int compare(BeverageRow dr1, BeverageRow dr2) {
 				String first = dr1.getName();
 				String second = dr2.getName();
-				Integer result = first.compareTo(second);
-				return result;
+				return first.compareTo(second);
 			}
 		};
-		public void sort() {
+		void sort() {
 		    Collections.sort(myObjects, mySorter);
 		    notifyDataSetChanged();
 		}
-		public BeverageAdapter(Context context, int textViewResourceId, ArrayList<BeverageRow> objects) {
+		BeverageAdapter(Context context, int textViewResourceId, ArrayList<BeverageRow> objects) {
 		    super(context, textViewResourceId, objects);
 		    myInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 		    myObjects = objects;
 		}
-		public void setFilterType(int _filterType) {
+		void setFilterType(int _filterType) {
 			filterType = _filterType;
 		}
-		public View getView (int position, View v, ViewGroup parent) {
+		@NonNull
+		public View getView (int position, View v, @NonNull ViewGroup parent) {
 			if (v == null) {
 				v = myInflater.inflate(R.layout.listbeverage, null);
 		    	}
@@ -298,10 +299,11 @@ public class DBHelper {
 		        notifyDataSetChanged();
 		    }
 		}
-		public void setContents(List<BeverageRow> strs) {
+		void setContents(List<BeverageRow> strs) {
 			myObjects.clear();
 			myObjects.addAll(strs);
 		}
+		@NonNull
 		public Filter getFilter() {
 		    if (myFilter == null) {
 		        myFilter = new BeverageFilter();
@@ -394,40 +396,36 @@ public class DBHelper {
 			Context context = getContext();
 			db = DBHelper.getInstance(context);
 	        allBeverages = db.getAllBeverages();
-	        //TopDrinkAdapter=new DrinkAdapter(this, R.layout.listdrink, (ArrayList<DrinkRow>) allDrinks);
-	        
-	        
-	        
-			return false;
+	        return false;
 		}
 
 		@Override
-		public Cursor query(Uri uri, String[] projection, String selection,
-				String[] selectionArgs, String sortOrder) {
+		public Cursor query(@NonNull Uri uri, String[] projection, String selection,
+							String[] selectionArgs, String sortOrder) {
 			// TODO Auto-generated method stub
 			return null;
 		}
 
 		@Override
-		public String getType(Uri uri) {
+		public String getType(@NonNull Uri uri) {
 			// TODO Auto-generated method stub
 			return null;
 		}
 
 		@Override
-		public Uri insert(Uri uri, ContentValues values) {
+		public Uri insert(@NonNull Uri uri, ContentValues values) {
 			// TODO Auto-generated method stub
 			return null;
 		}
 
 		@Override
-		public int delete(Uri uri, String selection, String[] selectionArgs) {
+		public int delete(@NonNull Uri uri, String selection, String[] selectionArgs) {
 			// TODO Auto-generated method stub
 			return 0;
 		}
 
 		@Override
-		public int update(Uri uri, ContentValues values, String selection,
+		public int update(@NonNull Uri uri, ContentValues values, String selection,
 				String[] selectionArgs) {
 			// TODO Auto-generated method stub
 			return 0;
@@ -435,7 +433,7 @@ public class DBHelper {
 
 	}
 
-	public static class DrinkRow extends Object {
+	public static class DrinkRow  {
 		private Long _id;
 		private BeverageRow Beverage;
 		private Date Ddate;
@@ -453,11 +451,9 @@ public class DBHelper {
 			Beverage = _beverage;
 			Ddate = _ddate;
 		}
-		DrinkRow (BeverageRow _beverage) {
+		public DrinkRow (BeverageRow _beverage) {
 			Beverage = _beverage;
-			Date d = new Date();
-	    	Ddate = d;
-
+			Ddate = new Date();
 		}
 		DrinkRow (Long new_id, BeverageRow _beverage, Date d) {
 			_id = new_id;
@@ -468,7 +464,7 @@ public class DBHelper {
 		public BeverageRow getBeverage() {
 			return Beverage;
 		}
-		public Date getDate() {
+		Date getDate() {
 			return Ddate;
 		}
 		public String getName() {
@@ -481,7 +477,7 @@ public class DBHelper {
 			
 			return formatter.format(Ddate);
 		}
-		public Long get_id() {
+		Long get_id() {
 			return _id;
 		}
 		public void setBeverage(BeverageRow newbev) {
@@ -495,15 +491,13 @@ public class DBHelper {
 		}
 	}
 
-
-
-	class ViewHolder {
+	private class ViewHolder {
 		TextView toptext;
 		TextView bottomtext;
 		Long hidingID;
 	}
 
-	public class DrinkAdapter extends ArrayAdapter<DrinkRow>  {
+	class DrinkAdapter extends ArrayAdapter<DrinkRow>  {
 		private List<DrinkRow> mObjects;
 	  	private final Object mLock = new Object();
 	    private ArrayList<DrinkRow> mOriginalValues;
@@ -516,17 +510,18 @@ public class DBHelper {
 			}
 	    };
 	   
-	    public void sort() {
+	    void sort() {
 	        Collections.sort(mObjects, dSorter);
 	        notifyDataSetChanged();
 	    }
 	       	
-	   	public DrinkAdapter(Context context, int textViewResourceId, ArrayList<DrinkRow> objects) {
+	   	DrinkAdapter(Context context, int textViewResourceId, ArrayList<DrinkRow> objects) {
 	        super(context, textViewResourceId, objects);
 	        mInflater = (LayoutInflater)context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 	        mObjects = objects;
 	    }
 		
+		@NonNull
 		public View getView (final int position, final View convertView, final ViewGroup parent) {
 
 			View v = convertView;
@@ -547,7 +542,7 @@ public class DBHelper {
 			       return v;
 		}
 
-		public void remove(int index) {
+		void remove(int index) {
 	        if (mOriginalValues != null) {
 	            synchronized (mLock) {
 	                mOriginalValues.remove(index);
@@ -595,7 +590,8 @@ public class DBHelper {
 	        }    	
 	    }
 	    
-	    public Filter getFilter() {
+	    @NonNull
+		public Filter getFilter() {
 	        if (mFilter == null) {
 	            mFilter = new BeverageFilter();
 	        }
@@ -656,7 +652,7 @@ public class DBHelper {
 	}
 
 	private class OpenHelper extends SQLiteOpenHelper {
-    	public OpenHelper(Context context) {
+    	OpenHelper(Context context) {
     		super(context, DATABASE_NAME, null, DATABASE_VERSION);
     	}
         @Override
@@ -738,17 +734,14 @@ public class DBHelper {
             openHelper = new OpenHelper(context);
     	}
     
-    public static DBHelper getInstance(Context context) {
-            if (dbHelper == null) {
-                    synchronized (lock) {
-                            if (dbHelper == null) {
-                                    dbHelper = new DBHelper(context);
-                            }
-                    }
-            }            
-        	db = dbHelper.openHelper.getWritableDatabase();
-        	cx = context;
-            return dbHelper;
+    public static synchronized DBHelper getInstance(Context context) {
+		if (dbHelper == null) {
+			dbHelper = new DBHelper(context);
+		}
+		db = dbHelper.openHelper.getWritableDatabase();
+
+		//cx = context;
+		return dbHelper;
     }
     
     public BeverageRow getBeverage(String name) {
@@ -756,7 +749,7 @@ public class DBHelper {
         Cursor c =
             db.query(TBL_BEVERAGE, new String[] {
             		B_ID, B_NAME, B_MAKER, B_MAKERLOCATION, B_DESCRIPTION, B_TAGS, B_R_OVERALL, B_PIC}, "_id=?", 
-            		new String[] {name.toString()},
+            		new String[] {name},
             		null, null, null, null);
         if (c.getCount() > 0) {
             c.moveToFirst();
@@ -768,12 +761,12 @@ public class DBHelper {
         return row;
     }
     
-    public BeverageRow getBeverage(String name, String maker) {
+    BeverageRow getBeverage(String name, String maker) {
     	BeverageRow row = null;
         Cursor c =
             db.query(TBL_BEVERAGE, new String[] {
             		B_ID, B_NAME, B_MAKER, B_MAKERLOCATION, B_DESCRIPTION, B_TAGS, B_R_OVERALL, B_PIC}, B_NAME+"=? AND "+B_MAKER+"=?", 
-            		new String[] {name.toString(), maker.toString()},
+            		new String[] {name, maker},
             		null, null, null, null);
         if (c.getCount() > 0) {
             c.moveToFirst();
@@ -802,8 +795,7 @@ public class DBHelper {
         return row;
     }
 
-    
-    public BeverageRow setBeverage(BeverageRow br) {
+    BeverageRow setBeverage(BeverageRow br) {
     	ContentValues initialValues = new ContentValues();
         initialValues.put(B_NAME, br.getName());
         initialValues.put(B_MAKER, br.getMaker());
@@ -817,17 +809,16 @@ public class DBHelper {
         	return getBeverage(newID);
         } else {
         	System.out.print("error inserting Beverage");
-        	
-        	BeverageRow ret = new BeverageRow(Long.decode("-1"));
-            return ret;
+
+			return new BeverageRow(Long.decode("-1"));
         }
     }
     
-    public void delBeverage(Long rowId) {
+    void delBeverage(Long rowId) {
         db.delete(TBL_BEVERAGE, B_ID + "=" + rowId.toString(),null);
     }
     
-    public int updateBeverage(BeverageRow br) {
+    int updateBeverage(BeverageRow br) {
     	ContentValues updateValues = new ContentValues();
         updateValues.put(B_NAME, br.getName());
         updateValues.put(B_MAKER, br.getMaker());
@@ -861,6 +852,24 @@ public class DBHelper {
         return ret;
     }
 
+    public BeverageRow getOneBeverage(String _name) {
+		BeverageRow row = null;
+		Cursor c =
+				db.query(TBL_BEVERAGE, new String[] {
+							B_ID, B_NAME, B_MAKER, B_MAKERLOCATION, B_DESCRIPTION, B_TAGS, B_R_OVERALL, B_PIC},
+							B_NAME + "=?",
+						new String[] {_name.toString()},
+						null, null, null, null);
+		if (c.getCount() > 0) {
+			c.moveToFirst();
+			row = new BeverageRow(c.getLong(0),c.getString(1),c.getString(2),c.getString(3),c.getString(4),c.getString(5),c.getInt(6),c.getString(7));
+		} else {
+			row = new BeverageRow(Long.decode("-1"));
+		}
+		c.close();
+		return row;
+	}
+
     public ArrayList<DrinkRow> getAllDrinks() {
     	ArrayList<DrinkRow> ret = new ArrayList<DrinkRow>();
         try {
@@ -890,7 +899,7 @@ public class DBHelper {
         return ret;
     }
 
-    public ArrayList<String> getAllMakers() {
+    ArrayList<String> getAllMakers() {
         ArrayList<String> ret = new ArrayList<String>();
         try {
             Cursor c =
@@ -911,7 +920,7 @@ public class DBHelper {
     	
     }
 
-    public String getMakersLocation(String maker) {
+    String getMakersLocation(String maker) {
     	String ret = null;
         Cursor c =
             db.query(TBL_BEVERAGE, 
@@ -933,14 +942,14 @@ public class DBHelper {
         return ret;    
     }
     
-    public void delDrink(Long rowId) {
+    void delDrink(Long rowId) {
     	db.delete(TBL_DRINK, D_ID + "=" + rowId.toString(),null);
     }
-	public void delDrinkFromBeverage(Long beverageId) {
+	void delDrinkFromBeverage(Long beverageId) {
 		db.delete(TBL_DRINK, D_BID+"=?", new String[] {beverageId.toString()});
 	}
 
-    public DrinkRow getDrink(Long rowId) {
+    private DrinkRow getDrink(Long rowId) {
     	DrinkRow row = null;
         Cursor c =
             db.query(TBL_DRINK, new String[] {
@@ -962,7 +971,7 @@ public class DBHelper {
         c.close();
         return row;
     }
-    public static List<String> GetColumns(SQLiteDatabase db, String tableName) {
+	private static List<String> GetColumns(SQLiteDatabase db, String tableName) {
         List<String> ar = null;
         Cursor c = null;
         try {
@@ -980,7 +989,8 @@ public class DBHelper {
         return ar;
     }
 
-    public static String join(List<String> list, String delim) {
+    @NonNull
+	private static String join(List<String> list, String delim) {
         StringBuilder buf = new StringBuilder();
         int num = list.size();
         for (int i = 0; i < num; i++) {
@@ -998,29 +1008,28 @@ public class DBHelper {
         	return getDrink(newID);
         } else {
         	System.out.print("error inserting Beverage");
-        	
-        	DrinkRow ret = new DrinkRow(Long.decode("-1"));
-            return ret;
+
+			return new DrinkRow(Long.decode("-1"));
         }
     }
     
     public void toXML() throws IOException {
-    		DatabaseMover xmlout = new DatabaseMover(db, cx);
-    		xmlout.export(DATABASE_NAME, (String) cx.getText(R.string.app_name));
+    		DatabaseMover xmlout = new DatabaseMover(db, App.getAppContext());
+    		xmlout.export(DATABASE_NAME, (String) App.getAppContext().getText(R.string.app_name));
     }
     public boolean toCSV() throws IOException {
-    	DatabaseMover csvout = new DatabaseMover(db, cx);
+    	DatabaseMover csvout = new DatabaseMover(db, App.getAppContext());
 		if (csvout.sdAvailable()) {
-			csvout.exportCsvTable(DATABASE_NAME, (String) cx.getText(R.string.app_name),TBL_BEVERAGE);
+			csvout.exportCsvTable(DATABASE_NAME, (String) App.getAppContext().getText(R.string.app_name),TBL_BEVERAGE);
 			return true;
 		} else {
 			return false;
 		}
     }
     public boolean fromCSV() throws IOException {
-    	DatabaseMover csvin = new DatabaseMover(db, cx);
+    	DatabaseMover csvin = new DatabaseMover(db, App.getAppContext());
 		if (csvin.sdAvailable()) {
-			csvin.importCsvTable(DATABASE_NAME, (String) cx.getText(R.string.app_name),TBL_BEVERAGE);
+			csvin.importCsvTable(DATABASE_NAME, (String) App.getAppContext().getText(R.string.app_name),TBL_BEVERAGE);
 			return true;
 		} else {
 			return false;

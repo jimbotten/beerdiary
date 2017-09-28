@@ -7,3 +7,10 @@
 /.idea/
 /build/
 /.idea/workspace.xml
+app/src/androidTest/aidl/
+app/src/androidTest/rs/
+app/src/androidTest/shaders/
+app/src/test/aidl/
+app/src/test/rs/
+app/src/test/shaders/
+app/src/testDebug/

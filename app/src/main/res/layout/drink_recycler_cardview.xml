@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drink_recycler_cardview"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
@@ -14,6 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:longClickable="false"
+            android:onClick="selectDrinkButton"
             android:orientation="vertical">
 
             <TextView

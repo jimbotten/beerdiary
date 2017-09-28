@@ -26,6 +26,7 @@ import java.util.ArrayList;
  */
 
 public class SelectDrinkRecycler extends AppCompatActivity {
+    static final int SELECT_BEVERAGE_REQUEST = 1;
     DBHelper db = null;
     ArrayList<DBHelper.DrinkRow> allDrinks= null;
 
@@ -54,6 +55,7 @@ public class SelectDrinkRecycler extends AppCompatActivity {
         mAdapter = new DrinkRecyclerAdapter(getApplicationContext(), allDrinks);
         mRecyclerView.setAdapter(mAdapter);
 
+
     }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
@@ -66,7 +68,7 @@ public class SelectDrinkRecycler extends AppCompatActivity {
         switch (item.getItemId()) {
             case (R.id.menuAddDrink) :
                 intent = new Intent(this, SelectBeverageRecycler.class);
-                startActivity(intent);
+                startActivityForResult(intent, SELECT_BEVERAGE_REQUEST);
                 break;
         }
         // TODO add a case for the options menu that opens an options page (similar to SetPreferences Class and preferences.xml
@@ -75,6 +77,41 @@ public class SelectDrinkRecycler extends AppCompatActivity {
 
     }
 
+    public void selectDrinkButton(View view) {
+        Intent intent = new Intent(this, SelectBeverageRecycler.class);
+        startActivityForResult(intent, SELECT_BEVERAGE_REQUEST);
+    }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+//        super.onActivityResult(requestCode, resultCode, data);
+//        Long bid;
+        if (requestCode==1 && data != null) {
+            switch (requestCode) {
+                case (SELECT_BEVERAGE_REQUEST): {
+                    if (resultCode == Activity.RESULT_OK) {
+
+                        String returnValue = data.getStringExtra("beverage");
+
+                        DBHelper.BeverageRow br = db.getOneBeverage(returnValue);
+
+                        DBHelper.DrinkRow dr = new DBHelper.DrinkRow(br);
+
+                        // insert at row 0, at the top, since this is reverse sorted
+                        allDrinks.add(0,dr);
+                        //adding to the database
+                         db.setDrink(dr);
+
+                        // refresh the adapter and the view
+                        mAdapter.notifyItemInserted(0);
+                        // scroll to the top
+                        mRecyclerView.scrollToPosition(0);
+                    }
+                    break;
+                }
+            }
+        }
+    }
 }
+
 

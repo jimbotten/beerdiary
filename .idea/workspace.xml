@@ -7,179 +7,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e44c0f32-1aaf-4c94-b6c9-f0f62fc9648b" name="Default" comment="Now using API 16 (4.1)">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/.classpath" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/.project" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/AndroidManifest.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/BeerDiary.apk" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/classes.dex" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/BeerDiary$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/BeerDiary$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/BeerDiary$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/BeerDiary$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/BeerDiary.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$Beverage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$BeverageAdapter$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$BeverageAdapter$BeverageFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$BeverageAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$BeverageProvider.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$BeverageRow.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$DrinkAdapter$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$DrinkAdapter$BeverageFilter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$DrinkAdapter.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$DrinkRow.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$OpenHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper$ViewHolder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DBHelper.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DatabaseMover$CsvBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DatabaseMover$XmlBuilder.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/DatabaseMover.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/EditBeverage$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/EditBeverage$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/EditBeverage$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/EditBeverage$4.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/EditBeverage$5.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/EditBeverage$6.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/EditBeverage$7.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/EditBeverage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R$array.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R$attr.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R$color.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R$drawable.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R$id.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R$layout.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R$menu.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R$string.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R$style.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R$xml.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/R.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/SearchAll.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/SearchBeverage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/SearchMaker.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/SearchTags.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/SelectBeverage$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/SelectBeverage$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/SelectBeverage$3.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/SelectBeverage.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/SetPreferences$1.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/com/beerdiary/SetPreferences.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/bin/resources.ap_" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/default.properties" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/gen/com/beerdiary/R.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/proguard.cfg" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable-mdpi/add.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable-mdpi/beerlogo.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable-mdpi/beerplusone.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable-mdpi/delete.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable-mdpi/edit.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable-mdpi/save.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable/beerdiary.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable/ic_tab_beer_s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable/ic_tab_beer_u.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable/ic_tab_beverages.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable/ic_tab_brew_s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable/ic_tab_brew_u.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable/ic_tab_makers.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable/ic_tab_tags.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable/ic_tab_tags_s.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/drawable/ic_tab_tags_u.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/layout/listbeverage.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/layout/listdrink.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/layout/preferences.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/layout/screenbeverage.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/layout/screendrinklist.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/layout/searchbeverages.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/layout/selectbeveragelist.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/menu/main.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/values/strings.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/values/style.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/values/themes.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/res/xml/searchable.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/src/com/beerdiary/BeerDiary.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/src/com/beerdiary/DBHelper.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/src/com/beerdiary/DatabaseMover.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/src/com/beerdiary/EditBeverage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/src/com/beerdiary/SearchAll.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/src/com/beerdiary/SearchBeverage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/src/com/beerdiary/SearchMaker.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/src/com/beerdiary/SearchTags.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/src/com/beerdiary/SelectBeverage.java" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/BeerDiary/src/com/beerdiary/SetPreferences.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileHashes.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/fileSnapshots.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/taskArtifacts/taskArtifacts.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/3.3/tasks/_app_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/BeerDiary$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/BeerDiary$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/BeerDiary$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/BeerDiary$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/BeerDiary.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/BeerDiary.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$Beverage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$Beverage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$BeverageAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$BeverageAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$BeverageAdapter$BeverageFilter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$BeverageAdapter$BeverageFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$BeverageAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$BeverageAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$BeverageProvider.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$BeverageProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$BeverageRow.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$BeverageRow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$DrinkAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$DrinkAdapter$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$DrinkAdapter$BeverageFilter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$DrinkAdapter$BeverageFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$DrinkAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$DrinkAdapter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$DrinkRow.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$DrinkRow.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$OpenHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$OpenHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$ViewHolder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper$ViewHolder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DBHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DatabaseMover.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/DatabaseMover.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$4.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$5.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$5.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$6.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$6.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$7.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage$7.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/EditBeverage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$array.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$array.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$attr.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$attr.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$color.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$color.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$drawable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$drawable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$id.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$id.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$menu.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$menu.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R$xml.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/R.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SearchAll.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SearchAll.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SelectBeverage$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SelectBeverage$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SelectBeverage$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SelectBeverage$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SelectBeverage$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SelectBeverage$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SelectBeverage.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SelectBeverage.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SetPreferences.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/beerdiary/SetPreferences.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/ft7niZe1zo8466sc3QKgAIAcQ1o=" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/zip-cache/ft7niZe1zo8466sc3QKgAIAcQ1o=" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/beerdiary/EditBeverageTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/androidTest/java/com/beerdiary/activities/SelectDrinkRecyclerTest.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/activities/App.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/test/java/com/beerdiary/DBHelperTest.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/beerdiary/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/beerdiary/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-mdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/menu.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/menu.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugAssets/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/dex-renamer-state.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/packageDebug/file-input-save-data.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/screenbeverage.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/layout/screenbeverage.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/main.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/menu/main.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" afterPath="$PROJECT_DIR$/app/build/outputs/logs/manifest-merger-debug-report.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build.gradle" afterPath="$PROJECT_DIR$/app/build.gradle" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/DBHelper.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/DBHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/activities/BeverageRecyclerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/activities/BeverageRecyclerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/activities/DrinkRecyclerAdapter.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/activities/DrinkRecyclerAdapter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/activities/SelectBeverageRecycler.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/activities/SelectBeverageRecycler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/activities/SelectDrinkRecycler.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/beerdiary/activities/SelectDrinkRecycler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/drink_recycler_cardview.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/drink_recycler_cardview.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/layout/select_beverage_recycler_view.xml" afterPath="$PROJECT_DIR$/app/src/main/res/layout/select_beverage_recycler_view.xml" />
     </list>
     <ignored path="BeerDiary.iws" />
     <ignored path=".idea/workspace.xml" />
+    <ignored path=".gradle/" />
+    <ignored path=".idea/" />
+    <ignored path="build/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +56,7 @@
     <favorites_list name="BeerDiary" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
@@ -421,6 +270,11 @@
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test.espresso:espresso-idling-resource:2.2.2" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportTestEspressoEspressoIdlingResource222Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="compileReleaseRenderscript" />
               </ExternalTaskPojo>
@@ -432,6 +286,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="processDebugAndroidTestManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test:rules:0.5" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportTestRules05Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -821,6 +680,11 @@
                 <option name="name" value="compileReleaseAidl" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test:runner:0.5" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportTestRunner05Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Runs lint on the Release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="lintRelease" />
@@ -888,6 +752,11 @@
                 <option name="name" value="prepareDebugUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test:exposed-instrumentation-api-publish:0.5" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportTestExposedInstrumentationApiPublish05Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="generateReleaseResources" />
               </ExternalTaskPojo>
@@ -946,6 +815,11 @@
                 <option name="description" value="Assembles all Release builds." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
                 <option name="name" value="assembleRelease" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test.espresso:espresso-core:2.2.2" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="prepareComAndroidSupportTestEspressoEspressoCore222Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
@@ -1131,6 +1005,11 @@
                 <option name="name" value="components" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test.espresso:espresso-idling-resource:2.2.2" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComAndroidSupportTestEspressoEspressoIdlingResource222Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="compileReleaseRenderscript" />
               </ExternalTaskPojo>
@@ -1142,6 +1021,11 @@
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="processDebugAndroidTestManifest" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test:rules:0.5" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComAndroidSupportTestRules05Library" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
@@ -1526,6 +1410,11 @@
                 <option name="name" value="compileReleaseAidl" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test:runner:0.5" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComAndroidSupportTestRunner05Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="description" value="Runs lint on the Release build." />
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="lintRelease" />
@@ -1593,6 +1482,11 @@
                 <option name="name" value="prepareDebugUnitTestDependencies" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test:exposed-instrumentation-api-publish:0.5" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComAndroidSupportTestExposedInstrumentationApiPublish05Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="generateReleaseResources" />
               </ExternalTaskPojo>
@@ -1653,6 +1547,11 @@
                 <option name="name" value="assembleRelease" />
               </ExternalTaskPojo>
               <ExternalTaskPojo>
+                <option name="description" value="Prepare com.android.support.test.espresso:espresso-core:2.2.2" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
+                <option name="name" value="prepareComAndroidSupportTestEspressoEspressoCore222Library" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
                 <option name="linkedExternalProjectPath" value="$PROJECT_DIR$/app" />
                 <option name="name" value="compileDebugAndroidTestRenderscript" />
               </ExternalTaskPojo>
@@ -1689,7 +1588,7 @@
     </option>
     <option name="modificationStamps">
       <map>
-        <entry key="H:\Android\AndroidStudioProjects\beerdiary" value="4513829536333" />
+        <entry key="H:\Android\AndroidStudioProjects\beerdiary" value="4514265018084" />
       </map>
     </option>
     <option name="projectBuildClasspath">
@@ -2074,13 +1973,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope">
         <subPane subId="Problems" />
-      </pane>
-      <pane id="PackagesPane" />
-      <pane id="AndroidView">
-        <subPane />
       </pane>
       <pane id="ProjectPane">
         <subPane>
@@ -2102,6 +1997,10 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="AndroidView">
+        <subPane />
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -2109,6 +2008,7 @@
     <property name="android.project.structure.last.selected" value="app" />
     <property name="android.project.structure.proportion" value="0.15" />
     <property name="device.picker.selection" value="Nexus_5X_API_16" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/build" />
   </component>
   <component name="RunManager" selected="Android App.app">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -2463,24 +2363,24 @@
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32391304" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13219616" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13219616" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2511,6 +2411,14 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beerdiary/DBHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -2519,13 +2427,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/import-summary.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/import-summary.txt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
       <provider editor-type-id="android-manifest">
         <state />
@@ -2538,13 +2440,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/listbeverage.xml">
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/beerdiary/DBHelper.java">
