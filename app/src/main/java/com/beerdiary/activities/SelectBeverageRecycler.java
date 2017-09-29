@@ -55,12 +55,7 @@ public class SelectBeverageRecycler extends AppCompatActivity {
         mAdapter = new BeverageRecyclerAdapter(allBeverages, this );
         mRecyclerView.setAdapter(mAdapter);
 
-        // TODO make this view respond to intents - if its opened from an intent, display a toast message
-        Intent intent = getIntent();
-        editMode=intent.getBooleanExtra("EDITING_MODE",false);
-        viewMode=intent.getBooleanExtra("VIEW_MODE",false);
 
-        // TODO if this view is responding to an intent, update the title bar somehow to show edit mode or select mode
         // TODO make the camera feature more seamless on the edit page
     }
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -80,21 +75,5 @@ public class SelectBeverageRecycler extends AppCompatActivity {
         return false;
 
     }
-//    public void selectBeverageItem(View view) {
-//
-//        Intent result = new Intent();
-//        result.putExtra("beverage", bv.getName());
-//        setResult();
-
-//        int pos = mRecyclerView.getChildViewHolder(view).getAdapterPosition();
-//        Toast.makeText(view.getContext(), "Pos is " + pos, Toast.LENGTH_SHORT).show();
-////        get name
-//        String bevName = allBeverages.get(pos).getName();
-//
-//        Intent result = new Intent();
-//        result.putExtra("beverage", bevName);
-//        ((Activity)context).setResult(RESULT_OK, result);
-//        ((Activity)context).finish();
-//    }
 
 }

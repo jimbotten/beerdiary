@@ -10,6 +10,9 @@ import android.content.Context;
 
 public class App extends Application {
 
+    static final int SELECT_BEVERAGE_REQUEST = 1;
+    static final int EDIT_BEVERAGE_REQUEST = 10;
+
     private static Context appContext;
         @Override
         public void onCreate() {

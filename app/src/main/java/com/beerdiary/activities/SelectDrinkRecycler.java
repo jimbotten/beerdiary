@@ -26,7 +26,7 @@ import java.util.ArrayList;
  */
 
 public class SelectDrinkRecycler extends AppCompatActivity {
-    static final int SELECT_BEVERAGE_REQUEST = 1;
+
     DBHelper db = null;
     ArrayList<DBHelper.DrinkRow> allDrinks= null;
 
@@ -68,7 +68,10 @@ public class SelectDrinkRecycler extends AppCompatActivity {
         switch (item.getItemId()) {
             case (R.id.menuAddDrink) :
                 intent = new Intent(this, SelectBeverageRecycler.class);
-                startActivityForResult(intent, SELECT_BEVERAGE_REQUEST);
+                // note that putextra is needed since startActivityForResult doens't send the request code,
+                // request code is used when the next activity returns
+                intent.putExtra("MODE", App.SELECT_BEVERAGE_REQUEST);
+                startActivityForResult(intent, App.SELECT_BEVERAGE_REQUEST);
                 break;
         }
         // TODO add a case for the options menu that opens an options page (similar to SetPreferences Class and preferences.xml
@@ -77,18 +80,13 @@ public class SelectDrinkRecycler extends AppCompatActivity {
 
     }
 
-    public void selectDrinkButton(View view) {
-        Intent intent = new Intent(this, SelectBeverageRecycler.class);
-        startActivityForResult(intent, SELECT_BEVERAGE_REQUEST);
-    }
-
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);
 //        Long bid;
         if (requestCode==1 && data != null) {
             switch (requestCode) {
-                case (SELECT_BEVERAGE_REQUEST): {
+                case (App.SELECT_BEVERAGE_REQUEST): {
                     if (resultCode == Activity.RESULT_OK) {
 
                         String returnValue = data.getStringExtra("beverage");

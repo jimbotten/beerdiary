@@ -19,6 +19,7 @@ import com.beerdiary.R;
 
 import java.util.ArrayList;
 
+import static android.content.Intent.FLAG_ACTIVITY_NEW_TASK;
 import static android.support.v4.app.ActivityCompat.startActivityForResult;
 import static android.support.v4.content.ContextCompat.startActivity;
 import static com.beerdiary.BeerDiary.EDIT_BEVERAGE;
@@ -58,16 +59,34 @@ public class DrinkRecyclerAdapter extends RecyclerView.Adapter<DrinkRecyclerAdap
         context = con;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public CardView mCardView;
         public TextView toptext, bottomtext;
-        public ImageButton btnEdit, btnAdd;
 
-        public ViewHolder(CardView itemview) {
+
+        public ViewHolder(View itemview) {
             super(itemview);
-            mCardView= itemview.findViewById(R.id.select_drink_recycler_view_recyclerview);
+            mCardView= itemview.findViewById(R.id.drink_recycler_cardview);
             toptext= itemview.findViewById(R.id.drink_recycler_cardview_toptext);
             bottomtext= itemview.findViewById(R.id.drink_recycler_cardview_bottomtext);
+//            mCardView.setOnClickListener(this);
+            mCardView.setOnClickListener(this);
+        }
+        @Override
+        public void onClick(View v) {
+            Intent intent = new Intent(context, com.beerdiary.activities.View_EditBeverage.class);
+            // note that putextra is needed since startActivityForResult doens't send the request code,
+            // request code is used when the next activity returns
+
+            // tell next view its EDIT
+            intent.putExtra("EDITING_MODE",true);
+            intent.putExtra("VIEW_MODE",false);
+            // tell next view which beverage
+            int pos = getAdapterPosition();
+            Long bid = mDataset.get(pos).getBeverage().get_id();
+            intent.putExtra("BID", bid);
+            intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            context.startActivity(intent);
         }
     }
 
@@ -87,9 +106,32 @@ public class DrinkRecyclerAdapter extends RecyclerView.Adapter<DrinkRecyclerAdap
     public void onBindViewHolder(final DrinkRecyclerAdapter.ViewHolder holder, final int position) {
         // - get element from your dataset at this position
         // - replace the contents of the particular card in the list with that element
-        holder.toptext.setText(mDataset.get(position).getName());
-        holder.bottomtext.setText(mDataset.get(position).getFormattedDate());
+        DBHelper.DrinkRow dr = mDataset.get(position);
+        holder.toptext.setText(dr.getName());
+        holder.bottomtext.setText(dr.getFormattedDate());
+
+//        holder.mCardView.setOnClickListener( new View.OnClickListener(){
+//            @Override
+//            public void onClick(final View v) {
+//
+//                Intent intent = new Intent(context, com.beerdiary.EditBeverage.class);
+//                // note that putextra is needed since startActivityForResult doens't send the request code,
+//                // request code is used when the next activity returns
+//
+//                // tell next view its EDIT
+//                intent.putExtra("EDITING_MODE",true);
+//                intent.putExtra("VIEW_MODE",false);
+//                // tell next view which beverage
+//                int pos = holder.getAdapterPosition();
+//                Long bid = mDataset.get(pos).getBeverage().get_id();
+//
+//                intent.putExtra("BID", bid);
+//
+//                context.startActivity(intent);
+//            }
+//        });
     }
+
 
     @Override
     public int getItemCount() { return mDataset.size(); }

@@ -183,13 +183,13 @@ public class DBHelper {
 			_id = new_id;
 		}
 
-		String getMakerLocation() {
+		public String getMakerLocation() {
     		return MakerLocation;
     	}
-    	String getDescription() {
+    	public String getDescription() {
     		return Description;
     	}
-    	String getTags() {
+    	public String getTags() {
     		return combine(Tags);
     	}
     	public Long get_id() {

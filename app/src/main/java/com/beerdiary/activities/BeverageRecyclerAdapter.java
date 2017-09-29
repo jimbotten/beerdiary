@@ -66,24 +66,29 @@ import static com.beerdiary.activities.DrinkRecyclerAdapter.context;
         holder.toptext.setText(br.getName());
         holder.bottomtext.setText(br.getMaker());
         holder.mCardView.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(final View v) {
-
-                resultReturn(holder.getAdapterPosition());
-            }
-        });
-        br.getName();
+            @Override  public void onClick(final View v) { resultReturn(holder.getAdapterPosition()); }    });
     }
 
     private void resultReturn(int pos){
+        // TODO if this view is responding to an intent, update the title bar somehow to show edit mode or select mode
 
+        int Mode = 0;
+
+        Intent intent = mActivity.getIntent();
+        Mode = intent.getIntExtra("MODE",1); // default to 1, select mode
         DBHelper.BeverageRow bv = mDataset.get(pos).getRow();
-        Intent result = new Intent();
-        result.putExtra("beverage", bv.getName());
-//        result.putExtra("beverage", pos);
-        Log.d(TAG, "item:" + pos + " name:" + bv.getName());
-        this.mActivity.setResult(RESULT_OK, result);
-        this.mActivity.finish();
+
+        if(Mode==1) {
+            // select mode and we just selected something, return to previous activity
+            Intent result = new Intent();
+            result.putExtra("beverage", bv.getName());
+            Log.d(TAG, "item:" + pos + " name:" + bv.getName());
+            this.mActivity.setResult(RESULT_OK, result);
+            this.mActivity.finish();
+        }
+        else { // assume edit mode?
+
+        }
     }
 
     @Override
@@ -94,9 +99,7 @@ import static com.beerdiary.activities.DrinkRecyclerAdapter.context;
         return mDataset.size();
     }
 
-    public String getBeverageNameAt(int pos) {
-        return mDataset.get(pos).getName();
-    }
+
 }
 
 
